@@ -17,4 +17,6 @@ app.use(express.static(path.join(__dirname, "..", "client", "build")));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.listen(80, () => console.log("Listening on port 80"));
+
 module.exports = app;
