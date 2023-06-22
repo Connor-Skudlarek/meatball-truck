@@ -1,0 +1,7 @@
+.ProductWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 65%;
+    margin-left: 17.5%;
+}
