@@ -1,9 +1,10 @@
-import './App.css';
-
+import "./App.css";
+import ProductWrapper from "./components/ProductWrapper";
 function App() {
   return (
     <div className="App">
-      <p>Lookin' good!</p>
+      <p>Appetizers & Salads</p>
+      <ProductWrapper />
     </div>
   );
 }
