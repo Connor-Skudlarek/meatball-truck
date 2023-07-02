@@ -1,0 +1,10 @@
+.LandingPage {
+  text-align: left;
+  color: white;
+}
+
+.LandingPage > p {
+  width: 70%;
+  margin-left: 15%;
+  font-weight: 700;
+}
