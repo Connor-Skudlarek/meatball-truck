@@ -1,19 +1,31 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ProductWrapper from "../components/ProductWrapper";
+import ProductCard from "../components/ProductCard";
+import "../styles/MenuPage.css";
 function MenuPage() {
-//   const [menuData, setMenuData] = useState([]);
+  const [menuData, setMenuData] = useState([]);
 
-//   useEffect(() => {
-//     fetch("/menu")
-//       .then((response) => response.json())
-//       .then((data) => setMenuData(data));
-//   }, []);
+  useEffect(() => {
+    fetch("/api/menu")
+      .then((response) => response.json())
+      .then((data) => setMenuData(data));
+  }, []);
 
   return (
-    // <div>{menuData.map(item => <p>{item}</p>)}</div>
-    <div>
+    <div className="MenuPage">
       <p>Appetizers & Salads</p>
-      <ProductWrapper />
+      <ProductWrapper>
+        {menuData.map((item) => (
+          <ProductCard
+            key={item.title}
+            title={item.title}
+            description={item.description}
+            price={`$${item.price.toFixed(2)}`}
+            foodImage={item.image}
+            foodImageAlt={item.altText}
+          />
+        ))}
+      </ProductWrapper>
     </div>
   );
 }

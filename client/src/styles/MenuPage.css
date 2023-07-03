@@ -1,0 +1,10 @@
+.MenuPage {
+  text-align: left;
+  color: white;
+}
+
+.MenuPage > p {
+  width: 70%;
+  margin-left: 15%;
+  font-weight: 700;
+}
