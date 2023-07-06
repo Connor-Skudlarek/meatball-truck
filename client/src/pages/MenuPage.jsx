@@ -5,6 +5,17 @@ import "../styles/MenuPage.css";
 function MenuPage() {
   const [menuData, setMenuData] = useState([]);
 
+  const categoryOrder = [
+    "Specials",
+    "Appetizers & Salads",
+    "The Balls",
+    "Stuffed Garlic Bread Cones",
+    "Classic Italian Pasta Dishes",
+    "Dessert",
+    "Drinks",
+    "Other Items",
+  ];
+
   useEffect(() => {
     fetch("/api/menu")
       .then((response) => response.json())
@@ -13,19 +24,23 @@ function MenuPage() {
 
   return (
     <div className="MenuPage">
-      <p>Appetizers & Salads</p>
-      <ProductWrapper>
-        {menuData.map((item) => (
-          <ProductCard
-            key={item.title}
-            title={item.title}
-            description={item.description}
-            price={`$${item.price.toFixed(2)}`}
-            foodImage={item.image}
-            foodImageAlt={item.altText}
-          />
-        ))}
-      </ProductWrapper>
+      {categoryOrder.map((category) => (
+        <div key={category}>
+          <p className="MenuPage-category">{category}</p>
+          <ProductWrapper>
+            {menuData[category]?.map((item) => (
+              <ProductCard
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                price={`$${item.price.toFixed(2)}`}
+                foodImage={item.image}
+                foodImageAlt={item.altText}
+              />
+            ))}
+          </ProductWrapper>
+        </div>
+      ))}
     </div>
   );
 }

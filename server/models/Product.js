@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// Need to include what category of menu item this is
-// For instance, category: "appOrSalad"
-// Then find() can be used on the category for each section
+
 const productSchema = new Schema({
+  category: String,
   title: String,
   description: String,
   price: Number,
