@@ -1,7 +1,7 @@
 ## meatball-truck
 
 # About
-This project is intended to replace the website [gotballstruck.com](https://www.gotballstruck.com/)https://www.gotballstruck.com/
+This project is intended to replace the website [gotballstruck.com](https://www.gotballstruck.com/)
 
 They want their website to be fully in-house rather than use Squarespace.
 
