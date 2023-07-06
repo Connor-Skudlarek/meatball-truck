@@ -3,8 +3,8 @@
   color: white;
 }
 
-.MenuPage > p {
+.MenuPage-category {
   width: 70%;
   margin-left: 15%;
-  font-weight: 700;
+  font-weight: 400;
 }

@@ -1,13 +1,20 @@
 .ProductCard {
-  background-color:dimgrey;
-  padding: 20px;
+  background-color: rgb(60, 60, 60);
+  padding: 16px 24px;
   border-radius: 5px;
+  transition: background-color 200ms ease-in-out;
+  color: rgb(240, 240, 240);
+}
+
+.ProductCard:hover {
+  background-color: rgb(30, 30, 30);
 }
 
 .ProductCard-content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: space-between;
 }
 
 .ProductCard-description {
@@ -18,4 +25,13 @@
   overflow: hidden;
 }
 
+.ProductCard-image {
+  padding-left: 20px;
+  margin-left: 20px;
+}
 
+.ProductCard-image img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}

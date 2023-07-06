@@ -17,7 +17,7 @@ function ProductCard(props) {
           <p className="ProductCard-price">{price}</p>
         </div>
         <div className="ProductCard-image">
-          <img src={foodImage} alt={foodImageAlt} height="96" width="96" />
+          <img src={foodImage} alt={foodImageAlt} />
         </div>
       </div>
     </div>
