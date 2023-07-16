@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductWrapper from "../components/ProductWrapper";
 import ProductCard from "../components/ProductCard";
+import Banner from "../components/Banner.jsx";
 import "../styles/MenuPage.css";
 function MenuPage() {
   const [menuData, setMenuData] = useState([]);
@@ -24,6 +25,7 @@ function MenuPage() {
 
   return (
     <div className="MenuPage">
+      <Banner />
       {categoryOrder.map((category) => (
         <div key={category}>
           <p className="MenuPage-category">{category}</p>
