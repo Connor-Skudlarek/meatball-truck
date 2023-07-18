@@ -34,7 +34,7 @@ function Footer() {
               alt="The instagram icon"
             />
           </a>
-          <p className="Footer-copyright">© {Date.now}</p>
+          <p className="Footer-copyright">© {new Date().getFullYear()}</p>
         </div>
       </div>
     </div>
