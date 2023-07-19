@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductWrapper from "../components/ProductWrapper";
 import ProductCard from "../components/ProductCard";
 import Banner from "../components/Banner.jsx";
+import Footer from "../components/Footer.jsx";
 import "../styles/MenuPage.css";
 function MenuPage() {
   const [menuData, setMenuData] = useState([]);
@@ -43,6 +44,7 @@ function MenuPage() {
           </ProductWrapper>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }
